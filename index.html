@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIV TECH Academy | Design, Learn & Create</title>
+<meta name="description" content="Shop professional posters, banners and flyers. Order custom graphic designs and learn digital skills at DIV TECH Academy.">
+
+<style>
+:root {
+  --background: #07111f;
+  --card: #101f33;
+  --blue: #168cff;
+  --silver: #d9e2ec;
+  --text: #f5f7fb;
+  --muted: #aebbd0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  padding: 18px 7%;
+  background: #0b1728;
+  border-bottom: 1px solid #243750;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.logo { font-size: 24px; font-weight: bold; }
+.logo span { color: var(--blue); }
+nav { display: flex; flex-wrap: wrap; gap: 15px; }
+nav a { color: var(--silver); text-decoration: none; font-size: 14px; }
+nav a:hover { color: var(--blue); }
+.hero {
+  text-align: center;
+  padding: 90px 7%;
+  background: radial-gradient(ellipse at top, #15365a, #07111f 70%);
+}
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #328fe4;
+  border-radius: 30px;
+  color: #a8d7ff;
+  font-size: 13px;
+}
+h1 { font-size: clamp(35px, 6vw, 60px); line-height: 1.15; }
+h1 span, h2 span { color: var(--blue); }
+.hero p { max-width: 650px; margin: 20px auto; color: var(--muted); }
+.button {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 20px;
+  margin: 7px 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button.secondary { background: transparent; border: 1px solid #6684a6; }
+section { padding: 65px 7%; }
+.section-title { text-align: center; margin-bottom: 35px; }
+.section-title p { color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid #253b56;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+}
+.card h3 { margin-top: 8px; }
+.card p { color: var(--muted); }
+.art {
+  height: 155px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #174f86, #101827);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.price { font-size: 21px; color: #8bc7ff; font-weight: bold; }
+.small { color: var(--muted); font-size: 13px; }
+form { max-width: 650px; margin: auto; }
+input, textarea, select {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0 15px;
+  background: #0a1728;
+  border: 1px solid #344b67;
+  border-radius: 6px;
+  color: white;
+}
+label { font-size: 14px; }
+.notice {
+  padding: 15px;
+  border-left: 4px solid var(--blue);
+  background: #10233b;
+  color: var(--silver);
+  border-radius: 5px;
+}
+footer {
+  padding: 30px 7%;
+  text-align: center;
+  background: #030914;
+  color: var(--muted);
+}
+footer a { color: #8bc7ff; }
+@media(max-width:600px) {
+  header { justify-content: center; }
+  nav { justify-content: center; }
+  .hero { padding: 60px 5%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DIV <span>TECH</span> ACADEMY</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Design Shop</a>
+    <a href="#custom">Custom Designs</a>
+    <a href="#blog">Blog</a>
+    <a href="#academy">Academy</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="badge">CREATIVITY • TECHNOLOGY • LEARNING</div>
+  <h1>Design Your Ideas.<br><span>Build Your Future.</span></h1>
+  <p>
+    Welcome to DIV TECH Academy, your creative destination for posters,
+    banners, flyers, graphic design services and digital skills tutorials.
+  </p>
+  <a class="button" href="#shop">Explore Design Shop</a>
+  <a class="button secondary" href="#custom">Order a Custom Design</a>
+</section>
+
+<section id="shop">
+  <div class="section-title">
+    <h2>Our <span>Design Shop</span></h2>
+    <p>Explore our design collection. Prices below are sample prices in Nigerian naira.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="art">BIRTHDAY<br>POSTER</div>
+      <h3>Birthday Poster</h3>
+      <p>A colourful design for birthdays and celebrations.</p>
+      <div class="price">₦2,000</div>
+      <button class="button" onclick="buy('Birthday Poster','2000')">Order This Design</button>
+    </article>
+
+    <article class="card">
+      <div class="art">BUSINESS<br>PROMOTION</div>
+      <h3>Business Flyer</h3>
+      <p>Promote your business, products and services.</p>
+      <div class="price">₦3,000</div>
+      <button class="button" onclick="buy('Business Flyer','3000')">Order This Design</button>
+    </article>
+
+    <article class="card">
+      <div class="art">EVENT<br>BANNER</div>
+      <h3>Event Banner</h3>
+      <p>Professional banners for events and celebrations.</p>
+      <div class="price">₦5,000</div>
+      <button class="button" onclick="buy('Event Banner','5000')">Order This Design</button>
+    </article>
+
+    <article class="card">
+      <div class="art">CHURCH<br>PROGRAMME</div>
+      <h3>Church Poster</h3>
+      <p>Promotional designs for church programmes.</p>
+      <div class="price">₦3,000</div>
+      <button class="button" onclick="buy('Church Poster','3000')">Order This Design</button>
+    </article>
+  </div>
+
+  <p class="notice">
+    These are sample product cards, not finished downloadable designs.
+    We will add your actual designs, final prices and secure payment options
+    before accepting online payments.
+  </p>
+</section>
+
+<section id="custom">
+  <div class="section-title">
+    <h2>Request a <span>Custom Design</span></h2>
+    <p>Tell us what you want designed for you.</p>
+  </div>
+
+  <form id="orderForm">
+    <label for="customer">Your name</label>
+    <input id="customer" required placeholder="Enter your name">
+
+    <label for="phone">Your contact number</label>
+    <input id="phone" required type="tel" placeholder="Enter your phone number">
+
+    <label for="design">Type of design</label>
+    <select id="design">
+      <option>Birthday Poster</option>
+      <option>Business Flyer</option>
+      <option>Event Banner</option>
+      <option>Church Poster</option>
+      <option>School Advertisement</option>
+      <option>Logo Design</option>
+      <option>Other</option>
+    </select>
+
+    <label for="details">Describe your design</label>
+    <textarea id="details" required rows="5" placeholder="Describe your idea, preferred colours, text and deadline"></textarea>
+
+    <button class="button" type="submit">Send Order Through WhatsApp</button>
+    <p class="small">Your order details will be prepared for you to send through WhatsApp.</p>
+  </form>
+</section>
+
+<section id="blog">
+  <div class="section-title">
+    <h2>Learn With Our <span>Blog</span></h2>
+    <p>Helpful articles for beginners who want to develop digital skills.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Introduction to Graphic Design</h3>
+      <p>Discover how colours, typography and layout work together to create effective designs.</p>
+      <span class="small">GRAPHIC DESIGN</span>
+    </article>
+
+    <article class="card">
+      <h3>How to Design a Professional Flyer</h3>
+      <p>Learn the basic steps involved in planning and creating a promotional flyer.</p>
+      <span class="small">DESIGN TUTORIAL</span>
+    </article>
+
+    <article class="card">
+      <h3>Getting Started With Web Design</h3>
+      <p>Understand how HTML and CSS help you create your first website.</p>
+      <span class="small">WEB DESIGN</span>
+    </article>
+  </div>
+  <p class="small">These are starter article previews. We can add full articles and a publishing workflow next.</p>
+</section>
+
+<section id="academy">
+  <div class="section-title">
+    <h2>Welcome to <span>DIV TECH Academy</span></h2>
+    <p>Learn, practise and develop your creative abilities.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <h3>🎨 Graphic Design</h3>
+      <p>Explore posters, flyers, banners and logo design.</p>
+    </article>
+    <article class="card">
+      <h3>🎬 Video Editing</h3>
+      <p>Discover video editing techniques and storytelling.</p>
+    </article>
+    <article class="card">
+      <h3>💻 Web Design</h3>
+      <p>Start learning how websites are created.</p>
+    </article>
+    <article class="card">
+      <h3>🤖 AI Tools</h3>
+      <p>Learn about creative AI tools and responsible use.</p>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title">
+    <h2>Contact <span>DIV TECH</span></h2>
+    <p>Questions about a design or tutorial? Get in touch.</p>
+  </div>
+  <div style="text-align:center">
+    <p>Email: Add your business email address</p>
+    <p>WhatsApp: Configure your business number to receive orders.</p>
+    <a class="button" href="#custom">Request a Design</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>DIV TECH Academy</strong></p>
+  <p>Design • Learn • Create • Grow</p>
+  <p>© <span id="year"></span> DIV TECH Academy. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Replace this example with your own WhatsApp number.
+   Use your country code and number, without +, spaces or dashes. */
+const WHATSAPP_NUMBER = "";
+
+function sendWhatsApp(message) {
+  if (!WHATSAPP_NUMBER) {
+    alert("WhatsApp ordering is not configured yet. We will connect your business number next.");
+    return;
+  }
+  window.open(
+    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+
+function buy(product, price) {
+  sendWhatsApp(
+    "Hello DIV TECH Academy! I am interested in ordering: " +
+    product + ". Sample listed price: ₦" + price +
+    ". Please confirm availability, final price and payment instructions."
+  );
+}
+
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const design = document.getElementById("design").value;
+  const details = document.getElementById("details").value.trim();
+
+  sendWhatsApp(
+    "Hello DIV TECH Academy! I want a custom design.\n" +
+    "Name: " + name + "\n" +
+    "Contact: " + phone + "\n" +
+    "Design type: " + design + "\n" +
+    "Details: " + details
+  );
+});
+</script>
+
+</body>
+</html>
